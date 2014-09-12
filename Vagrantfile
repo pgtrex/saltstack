@@ -45,6 +45,13 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
      reinforcement_config.vm.network "private_network", ip: "10.10.10.14"
    end
 
+ # Config for minion
+  config.vm.define :minion do |minion_config|
+     minion_config.vm.host_name = "minion"            
+     minion_config.vm.box = "ubuntu/trusty64"                                                                                                
+     minion_config.vm.network "private_network", ip: "10.10.10.15"
+   end
+
 #  config.vm.provision "shell", inline: "echo Hello"
 #
 #  config.vm.define "master" do |master|
