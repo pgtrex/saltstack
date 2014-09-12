@@ -1,0 +1,13 @@
+interface: 10.10.10.10
+
+fileserver_backend:
+  - git
+  - roots
+
+gitfs_remotes:
+  - git://github.com/saltstack/salt-states.git
+
+base:
+  - /srv/pillar
+
+
